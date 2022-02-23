@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="./demo1.html" method="get">
+            <p>
+                username: 
+                <input type="text" name="username" value="ChiChi" maxlength="8" size="10" />
+            </p>
+            <p>
+                password: 
+                <input type="password" name="pwd" />
+            </p>
+            <p>
+                gender: 
+                <input type="radio" value="male" name="gender" />
+                male
+                <input type="radio" value="female" name="gender" />
+                female
+            </p>
+            <p>
+                hobby: 
+                <input type="checkbox" value="sleep" name="hobby" />
+                sleep
+                <input type="checkbox" value="code" name="hobby" />
+                code
+                <input type="checkbox" value="chat" name="hobby" />
+                chat
+                <input type="checkbox" value="video game" name="hobby" />
+                video game
+            </p>
+            <p>
+                <input type="button" name="btn1" value="click for coupon" />
+            </p>
+            <p>
+                Country Code select: 
+                <select name="country_code">
+                    <option value="1">Canada/USA</option>
+                    <option value="7">Kazakhstan/Russia</option>
+                    <option value="20">Egypt</option>
+                    <option value="27">South Africa</option>
+                    <option value="" selected>select</option>
+                </select>
+            </p>
+            <p>
+                Write something here: <br />
+                <textarea name="textarea" cols="50" rows="10">write something</textarea>
+            </p>
+            <p>
+                submit a file: 
+                <input type="file" name="one_file" />
+            </p>
+            <p>
+                email: 
+                <input type="email" name="email" />
+            </p>
+            <p>
+                url: 
+                <input type="url" name="url" />
+            </p>
+            <p>
+                number: 
+                <input type="number" name="num" max="100" min="0" step="10" />
+            </p>
+            <p>
+                voice: 
+                <input type="range" name="voice" min="0" max="100" step="10" />
+            </p>
+            <p>
+                search something: 
+                <input type="search" name="search" />
+            </p>
+            <p>
+                read only: 
+                <input type="text" name="admin" value="admin" readonly />
+            </p>
+            <p>
+                disabled button: 
+                <input type="button" name="dis_btn" value="disabled" disabled />
+            </p>
+            <p>
+                hidden here:
+                <input type="text" name="hidden_txt" value="hidden text" hidden />
+            </p>
+            <p>
+                labeled:
+                <label for="marked">click me</label>
+                <input type="search" name="label_search" id="marked" value="click labeled element and jump here" />
+            </p>
+            <p>
+                text hint: 
+                <input type="text" name="text_hint" placeholder="type something here" />
+            </p>
+            <p>
+                require not null:
+                <input type="text" name="text_hint" placeholder="not null" required />
+            </p>
+            <p>
+                check with pattern
+                <input type="text" name="text_hint" placeholder="Only upper case allowed" pattern="[A-Z]"/>
+            </p>
+            <p>
+                image submit:
+                <input type="image" src="./img/demo1.png" />
+            </p>
+            <input type="submit" />
+            <input type="reset" />
+        </form>
+    </body>
+</html>
