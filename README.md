@@ -7,6 +7,7 @@
 ## Index
   - [Homework 1](#homework-1)
   - [Homework 2](#homework-2)
+  - [Homework 3](#homework-3)
 
 ---
 
@@ -25,4 +26,23 @@
   Code: [Quicksort](./mysite/src/mysite/Quicksort.mo)
 
   ICP canister id:  qq7fs-jqaaa-aaaal-qahma-cai
+
   Test canister api on: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app
+
+### homework 3
+
+- [x] deploy a http query request
+
+  Code: [http_request](./my_counter/src/my_counter/http_request.mo)
+
+  ICP canister id:  zdslh-eqaaa-aaaal-qakta-cai
+
+  Test canister api on: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app
+
+  Test http query request on: http://zdslh-eqaaa-aaaal-qakta-cai.raw.ic0.app
+
+  1. query counter value: [/get](http://zdslh-eqaaa-aaaal-qakta-cai.raw.ic0.app/get)
+
+  2. query next value: [/next](http://zdslh-eqaaa-aaaal-qakta-cai.raw.ic0.app/next)
+
+  3. send a number as path variable: [/send_num/{num}](http://zdslh-eqaaa-aaaal-qakta-cai.raw.ic0.app/send_num/999)
