@@ -17,7 +17,7 @@
 
   Code: [mysite_assets](./mysite/src/mysite_assets/)
 
-  ICP access: https://qx6dg-eiaaa-aaaal-qahmq-cai.ic0.app/
+  ICP access: https://2mscs-xiaaa-aaaal-qanea-cai.ic0.app/
 
 ### homework 2
 
@@ -25,7 +25,7 @@
 
   Code: [Quicksort](./mysite/src/mysite/Quicksort.mo)
 
-  ICP canister id:  qq7fs-jqaaa-aaaal-qahma-cai
+  ICP canister id:  3b4g4-yaaaa-aaaal-qandq-cai
 
   Test canister api on: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app
 
@@ -35,14 +35,14 @@
 
   Code: [http_request](./my_counter/src/my_counter/http_request.mo)
 
-  ICP canister id:  zdslh-eqaaa-aaaal-qakta-cai
+  ICP canister id:  2lteg-2qaaa-aaaal-qaneq-cai
 
   Test canister api on: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app
 
-  Test http query request on: http://zdslh-eqaaa-aaaal-qakta-cai.raw.ic0.app
+  Test http query request on: http://2lteg-2qaaa-aaaal-qaneq-cai.raw.ic0.app
 
-  1. query counter value: [/get](http://zdslh-eqaaa-aaaal-qakta-cai.raw.ic0.app/get)
+  1. query counter value: [/get](http://2lteg-2qaaa-aaaal-qaneq-cai.raw.ic0.app/get)
 
-  2. query next value: [/next](http://zdslh-eqaaa-aaaal-qakta-cai.raw.ic0.app/next)
+  2. query next value: [/next](http://2lteg-2qaaa-aaaal-qaneq-cai.raw.ic0.app/next)
 
-  3. send a number as path variable: [/send_num/{num}](http://zdslh-eqaaa-aaaal-qakta-cai.raw.ic0.app/send_num/999)
+  3. send a number as path variable: [/send_num/{num}](http://2lteg-2qaaa-aaaal-qaneq-cai.raw.ic0.app/send_num/999)

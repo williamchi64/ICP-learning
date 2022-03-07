@@ -2,17 +2,21 @@
   "version": 1,
   "dfx": "0.9.2",
   "canisters": {
-    "mysite": {
+    "microblog": {
       "type": "motoko",
-      "main": "src/mysite/main.mo"
+      "main": "src/microblog/main.mo"
     },
-    "mysite_assets": {
+    "microblog2": {
+      "type": "motoko",
+      "main": "src/microblog/main.mo"
+    },
+    "microblog_assets": {
       "type": "assets",
       "source": [
-        "src/mysite_assets/assets"
+        "src/microblog_assets/assets"
       ],
       "dependencies": [
-        "mysite"
+        "microblog"
       ]
     }
   },
