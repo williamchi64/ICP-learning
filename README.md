@@ -8,6 +8,7 @@
   - [Homework 1](#homework-1)
   - [Homework 2](#homework-2)
   - [Homework 3](#homework-3)
+  - [Homework 4](#homework-4)
 
 ---
 
@@ -46,3 +47,15 @@
   2. query next value: [/next](http://2lteg-2qaaa-aaaal-qaneq-cai.raw.ic0.app/next)
 
   3. send a number as path variable: [/send_num/{num}](http://2lteg-2qaaa-aaaal-qaneq-cai.raw.ic0.app/send_num/999)
+
+### homework 4
+
+- [x] deploy microblog
+
+  Code: [microblog](./microblog/src/microblog/main.mo)
+
+  microblog canister: 2frjo-baaaa-aaaal-qanfq-cai
+
+  microblog2 canister: 2qwyd-aiaaa-aaaal-qanga-cai
+
+  Test canister api on: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app

@@ -1,7 +1,7 @@
-import Time "mo:base/Time";
+import Iter "mo:base/Iter";
 import List "mo:base/List";
 import Principal "mo:base/Principal";
-import Iter "mo:base/Iter";
+import Time "mo:base/Time";
 
 
 module Microblog {

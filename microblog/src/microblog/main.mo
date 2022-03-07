@@ -29,7 +29,7 @@ actor Microblog{
     public shared(msg) func post(text: Text): async() {
         // Debug.print(debug_show(msg));
         // Debug.print(Int.toText(Time.now()));
-        assert(Principal.toText(msg.caller) == "ebffk-bwfav-ug43x-oxpjj-aqko7-e7n5l-2xrpg-twq5s-sjlib-pa6b4-sqe");
+        // assert(Principal.toText(msg.caller) == "...");
         messages := List.push(
             {
                 content = text;
