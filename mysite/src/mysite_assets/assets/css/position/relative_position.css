@@ -1,0 +1,28 @@
+div{
+    margin: 10px;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 25px;
+}
+#father{
+    border: 1px solid #666;
+    padding: 0px;
+}
+#first{
+    border: 1px solid #b27530;
+    background-color: #a13d30;
+    position: relative;
+    top: -20px;
+    left: 20px;
+}
+#second{
+    border: 1px solid #255066;
+    background-color: #255099;
+}
+#third{
+    border: 1px solid #1c6615;
+    background-color: #1c6699;
+    position: relative;
+    bottom: 10px;
+    right: 20px;
+}

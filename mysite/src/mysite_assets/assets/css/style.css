@@ -1,4 +1,141 @@
-h1{
-    color: red;
-    
+body{
+    background-color: #4158D0;
+    background-image: linear-gradient(275deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.exampleInCSSFile{
+    color: blue;
+}
+.pStyle{
+    background-color: aqua;
+}
+#uniqueId{
+    color: blueviolet;
+}
+h3{
+    background-color: yellowgreen;
+    border-radius: 24px;
+}
+p{
+    background-color: goldenrod;
+}
+body p{
+    font-size: large;
+}
+ol > li{
+    font-style: italic;
+}
+.demo a{
+    float: left;
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background: blue;
+    text-align: center;
+    color: gainsboro;
+    text-decoration: none;
+    margin-right: 5px;
+    font: bold 20px/50px Arial;
+}
+a[class*="item"]{
+    background: gray;
+}
+a[id]{
+    background: yellow;
+}
+a[id=a2]{
+    background: orange;
+}
+a[href^="/a"]{
+    background: chartreuse;
+}
+a[href$=doc]{
+    background: rebeccapurple;
+}
+a[class="links item last"]{
+    background: green;
+}
+#spanExp1{
+    font-size: 36px;
+}
+#fontExp1{
+    font-family: 'Times New Roman', Times, serif;
+}
+#fontExp2{
+    font-size: 42px;
+}
+#fontExp3{
+    font-weight: bold;
+}
+#fontAllin{
+    font: oblique bolder 24px 'Times New Roman';
+}
+#colorRGB{
+    color: rgb(0, 255, 255);
+}
+#colorRGBA{
+    color: rgba(0, 255, 255, 0.5);
+}
+#textAlign{
+    text-align: center;
+}
+#textIndent{
+    text-indent: 2em;
+}
+#lineHeight{
+    background-color: aqua;
+    height: 300px;
+    line-height: 50px;
+}
+#textDecoration{
+    text-decoration: line-through;
+}
+img, span{
+    vertical-align: middle;
+}
+a[href="#"]{
+    text-decoration: none;
+}
+a:hover[href="#"]{
+    color: orange;
+    font-size: 50px;
+}
+a:active[href="#"]{
+    color: green;
+    font-size: 50px;
+}
+#shadowExp1{
+    text-shadow: gray 10px 10px 1px;
+}
+#listDiv1{
+    width: 300px;
+}
+.listTitle1{
+    font-size: 18px;
+    font-weight: bold;
+    text-indent: 1em;
+    line-height: 35px;
+}
+ul{
+    background-color: grey;
+}
+ul[id=listUl] li{
+    height: 30px;
+    list-style: none;
+    text-indent: 1em;
+}
+li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+}
+/*background-repeat: repeat-x; repeat-y; no-repeat;*/
+.backgroundDiv1{
+    width: 900px;
+    height: 700px;
+    border: 1px solid red;
+    background-image: url("../img/background.jpg");
+    font-size: 50px;
+    color: white;
 }

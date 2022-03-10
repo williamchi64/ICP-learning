@@ -1,0 +1,37 @@
+#content{
+    width: 180px;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 25px;
+    border: 1px #000 solid;
+}
+ul,li{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+#content ul{
+    position: relative;
+}
+img[src$="cat1.jpg"]{
+    width: 180px;
+}
+.tipText, .tipBg{
+    position: absolute;
+    width: 380px;
+    height: 25px;
+    top: 216px;
+}
+.tipText{
+    color: white;
+    /*set content to top layer*/
+    z-index: 99;
+    /*only affect on IE8 or before*/
+    filter: Alpha(opacity=50);
+}
+.tipBg{
+    background: #000;
+    opacity: 0.5;
+}

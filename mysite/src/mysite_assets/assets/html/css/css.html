@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <style>
+        .exmaple {
+            color: green
+        }
+    </style>
+    <title>CSS Start</title>
+</head>
+<body>
+    <h1>CSS Start</h1>
+    <h2>what is CSS</h2>
+    <p>
+        CSS (Cascading Style Sheets) allows you to create great-looking web pages, 
+        but how does it work under the hood? This article explains what CSS is, 
+        with a simple syntax example, and also covers some key terms about the language.<br />
+        <hr />
+        <ol>
+            <li>CSS selector</li>
+            <li>use CSS beautify web pages</li>
+            <li>CSS Box Model</li>
+            <li>CSS float</li>
+            <li>CSS position</li>
+            <li>Web animation</li>
+        </ol>
+    </p>
+    <h2>CSS selector</h2>
+    <p>
+        The selectors are defined in 'style' element in HTML web page,
+            or can be defiend in CSS file, 'name.css'.
+        A selector contains name and {style: style_define;}.
+        Selector name could be a element name or a customized class name 
+            which can be stated as attribute 'class="name"' in element.
+        To import a bunch of CSS selectors, use 'link' element.<br />
+        eg.<br />
+        &lt;style&gt;<br />
+        &emsp;h1{<br />
+        &emsp;&emsp;color: red<br />
+        &emsp;}<br />
+        &lt;/style&gt;<br />
+        After writing css in style.css, it can be imported by 'link'.
+        &lt;link rel="stylesheet" href="../../css/style.css" /&gt;
+        <h3>Why should CSS be separated from HTML</h3>
+        <p>
+            <ol>
+                <li>Make code more structual</li>
+                <li>CSS Repeatly used for other HTML web pages</li>
+                <li>Higher code maintainability</li>
+            </ol>
+        </p>
+        <h3>Three ways refernece CSS style</h3>
+        <p>
+            <h4>1. Statement in tag element</h4>
+            <p>
+                <h5 style="color: red">CSS make title red</h5>
+                code:<br />
+                &lt;h5 style="color: red"&gt;CSS make title red&lt;/h5&gt;
+            </p>
+            <h4>2. Statement in &lt;style&gt;...&lt;/style&gt;</h4>
+            <p>
+                Put style tag in &lt;head&gt;...&lt;/head&gt;<br />
+                code:<br />
+                &lt;style&gt;<br />
+                &emsp;.exmaple {<br />
+                &emsp;&emsp;color: green<br />
+                &emsp;}<br />
+                &lt;/style&gt;<br />
+                Then, reference in class element.
+                <h5 class="exmaple">CSS make title green</h5>
+                code:<br />
+                &lt;h5 class="exmaple"&gt;CSS make title green&lt;/h5&gt;
+            </p>
+            <h4>3. Statement in CSS file</h4>
+            <p>
+                Put statement in file.css<br />
+                code:<br />
+                .exampleInCSSFile{<br />
+                &emsp;color: blue;<br />
+                }<br />
+                Then, reference in &lt;head&gt;...&lt;/head&gt;.<br />
+                code:<br />
+                &lt;link rel="stylesheet" href="../../css/style.css" /&gt;
+                Finally, reference in class element.
+                <h5 class="exampleInCSSFile">CSS make title blue</h5>
+                code:<br />
+                &lt;h5 class="exampleInCSSFile"&gt;CSS make title blue&lt;/h5&gt;
+            </p>
+            <h4>Ex. Import, deprecated way</h4>
+            <p>
+                Import outer style. This will cause deferred rendering. <br />
+                &lt;style&gt;<br />
+                &emsp;@import url("../../css/style.css");<br />
+                &lt;/style&gt;<br />
+            </p>
+        </p>
+        <h3>Three Basic selectors</h3>
+        <p>
+            <h4>1. Tag selector</h4>
+            <p>
+                Change the style of a specific tag.<br />
+                Add background to tag h3 element.<br />
+                code:<br />
+                h3{<br />
+                &emsp;background-color: yellowgreen;<br />
+                &emsp;border-radius: 24px;<br />
+                }
+            </p>
+            <h4>2. Class selector</h4>
+            <p class="pStyle">
+                Change the style of the tag with specific class element.<br />
+                Change only this block background color.<br />
+                code:<br />
+                .pStyle{<br />
+                &emsp;background-color: aqua;<br />
+                }<br />
+                &lt;p class="pStyle"&gt;<br />
+                &emsp;...<br />
+                &lt;/p&gt;
+            </p>
+            <h4>3. Id selector</h4>
+            <p id="uniqueId">
+                Change the style of the tag with a unique id.<br />
+                code:<br />
+                #uniqueId{<br />
+                &emsp;color: blueviolet;<br />
+                }<br />
+                &lt;p id="uniqueId"&gt;<br />
+                &emsp;...<br />
+                &lt;/p&gt;
+            </p>
+            <h4>Ex. Three selector weights</h4>
+            <p>
+                id: 100 > class: 10 > tag: 1
+            </p>
+        </p>
+        <h3>Combinators</h3>
+        <p>
+            <h4>Descendant combinator</h4>
+            <p>
+                The " " (space) combinator selects nodes that are descendants of the first element.<br />
+                All tag p laying inside tag body would change the content to a large font.<br />
+                code:<br />
+                body p{<br />
+                &emsp;font-size: large;<br />
+                }<br />
+            </p>
+            <h4>Child combinator</h4>
+            <p>
+                The > combinator selects nodes that are direct children of the first element.<br />
+                All list in order list would change the content to a italic font; <br />
+                code:<br />
+                ol > li{<br />
+                &emsp;font-style: italic;<br />
+                }<br />
+            </p>
+            <h4>Adjacent sibling combinator</h4>
+            <p>
+                The + combinator matches the second element only if it immediately follows the first element.<br />
+                p2 background turn red. <br />
+                code:<br />
+                .active + p{<br />
+                &emsp;background: red;<br />
+                }<br />
+                &lt;p class="active"&gt;p1&lt;/p&gt;<br />
+                &lt;p&gt;p2&lt;/p&gt;<br />
+                &lt;p&gt;p3&lt;/p&gt;<br />
+            </p>
+            <h4>General sibling combinator</h4>
+            <p>
+                The ~ combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.<br />
+                p2 & p3 background turn red. <br />
+                code:<br />
+                .active ~ p{<br />
+                &emsp;background: red;<br />
+                }<br />
+                &lt;p class="active"&gt;p1&lt;/p&gt;<br />
+                &lt;p&gt;p2&lt;/p&gt;<br />
+                &lt;p&gt;p3&lt;/p&gt;<br />
+            </p>
+        </p>
+        <h3>Pseudo</h3>
+        <p>
+            <h4>Pseudo classes</h4>
+            <p>
+                The : pseudo allow the selection of elements based on state information that is not contained in the document tree.<br />
+                li1 background turn red. <br />
+                code:<br />
+                ul li:first-child{<br />
+                &emsp;background: red;<br />
+                }<br />
+                &lt;ul><br />
+                &emsp;&lt;li&gt;li1&lt;/li&gt;<br />
+                &emsp;&lt;li&gt;li2&lt;/li&gt;<br />
+                &emsp;&lt;li&gt;li3&lt;/li&gt;<br />
+                &lt;/ul><br />
+                p1 background turn red. <br />
+                Choose from all children of p's father tag body. If the first is not p, it will be not affected.<br />
+                code:<br />
+                p:nth-child(1){<br />
+                &emsp;background: red;<br />
+                }<br />
+                &lt;body&gt;<br />
+                &emsp;&lt;p&gt;p1&lt;/p&gt;<br />
+                &emsp;&lt;p&gt;p2&lt;/p&gt;<br />
+                &emsp;&lt;p&gt;p3&lt;/p&gt;<br />
+                &lt;/body&gt;
+                p2 background turn red. <br />
+                Choose from all children which is p of p's father tag body. If the first is not p, first p will be affected.<br />
+                code:<br />
+                p:nth-of-typle(1){<br />
+                &emsp;background: red;<br />
+                }<br />
+                &lt;body&gt;<br />
+                &emsp;&lt;h1&gt;h1&lt;/h1&gt;<br />
+                &emsp;&lt;p&gt;p2&lt;/p&gt;<br />
+                &emsp;&lt;p&gt;p3&lt;/p&gt;<br />
+                &lt;/body&gt;
+            </p>
+        </p>
+        <h3>Attribute selector</h3>
+        <p>
+            Selects all elements that have the given attribute.<br />
+            eg.<br />
+            <p class="demo">
+                <a href="http://www.google.com" class="links item first" id="first">1</a>
+                <a href="#" class="links item active" target="_blank" title="test">2</a>
+                <a href="../../img/demo1.png" class="links item" id="a2">3</a>
+                <a href="../../img/demo1.png" class="links item">4</a>
+                <a href="../../img/demo1.png" class="links item">5</a>
+                <a href="abd" class="links item">6</a>
+                <a href="/a.pdf" class="links item">7</a>
+                <a href="/abc.pdf" class="links item">8</a>
+                <a href="abc.doc" class="links item">9</a>
+                <a href="abcd.doc" class="links item last">10</a>
+            </p>
+            <br />
+            <br />
+            <br />
+            css:<br />
+            a[class*="item"]{<br />
+            &emsp;background: gray;<br />
+            }<br />
+            a[id]{<br />
+            &emsp;background: yellow;<br />
+            }<br />
+            a[id=a2]{<br />
+            &emsp;background: orange;<br />
+            }<br />
+            a[href^="/a"]{<br />
+            &emsp;background: chartreuse;<br />
+            }<br />
+            a[href$=doc]{<br />
+            &emsp;background: rebeccapurple;<br />
+            }<br />
+            a[class="links item last"]{<br />
+            &emsp;background: green;<br />
+            }<br />
+            code:<br />
+            &lt;p class="demo"&gt;<br />
+            &emsp;&lt;a href="http://www.google.com" class="links item first" id="first"&gt;1&lt;/a&gt;<br />
+            &emsp;&lt;a href="#" class="links item active" target="_blank" title="test"&gt;2&lt;/a&gt;<br />
+            &emsp;&lt;a href="../../img/demo1.png" class="links item" id="a2"&gt;3&lt;/a&gt;<br />
+            &emsp;&lt;a href="../../img/demo1.png" class="links item"&gt;4&lt;/a&gt;<br />
+            &emsp;&lt;a href="../../img/demo1.png" class="links item"&gt;5&lt;/a&gt;<br />
+            &emsp;&lt;a href="abd" class="links item"&gt;6&lt;/a&gt;<br />
+            &emsp;&lt;a href="/a.pdf" class="links item"&gt;7&lt;/a&gt;<br />
+            &emsp;&lt;a href="/abc.pdf" class="links item"&gt;8&lt;/a&gt;<br />
+            &emsp;&lt;a href="abc.doc" class="links item"&gt;9&lt;/a&gt;<br />
+            &emsp;&lt;a href="abcd.doc" class="links item last"&gt;10&lt;/a&gt;<br />
+            &lt;/p&gt;<br />
+            
+        </p>
+    </p>
+    <h2>use CSS beautify web pages</h2>
+    <p>
+        <ol>
+            <li>clear page information</li>
+            <li>fascinate users</li>
+            <li>highlight emphasis</li>
+            <li>optimize user experience</li>
+        </ol>
+        <h3>&lt;span&gt;...&lt;/span&gt;</h3>
+        <p>
+            It does not inherently represent anything. It can be used to group elements for styling purposes.<br />
+            eg:<br />
+            <span id="spanExp1">36px size font</span><br />
+            css:<br />
+            #spanExp1{<br />
+            &emsp;font-size: 36px;<br />
+            }<br />
+            code:<br />
+            &lt;span id="spanExp1"&gt;36px size font&lt;/span&gt;
+            
+        </p>
+        <h3>&lt;div&gt;...&lt;/div&gt;</h3>
+        <p>
+            It is the generic container for flow content. It has no effect on the content or layout until styled in some way using CSS   
+        </p>
+        <h3>font family</h3>
+        <p>
+            eg:<br />
+            <span id="fontExp1">Times New Roman</span><br />
+            css:<br />
+            #fontExp1{<br />
+            &emsp;font-family: 'Times New Roman', Times, serif;<br />
+            }
+        </p>
+        <h3>font size</h3>
+        <p>
+            eg:<br />
+            <span id="fontExp2">42 px size</span><br />
+            css:<br />
+            #fontExp2{<br />
+            &emsp;font-size: 42px;<br />
+            }
+        </p>
+        <h3>font weight</h3>
+        <p>
+            eg:<br />
+            <span id="fontExp3">font weight bold</span><br />
+            css:<br />
+            #fontExp3{<br />
+            &emsp;font-weight: bold;<br />
+            }
+        </p>
+        <h3>font all in</h3>
+        <p>
+            eg:<br />
+            <span id="fontAllin">oblique bolder 24px 'Times New Roman'</span><br />
+            css:<br />
+            #fontAllin{<br />
+            &emsp;font: oblique bolder 24px 'Times New Roman';<br />
+            }
+        </p>
+        <h3>color</h3>
+        <p>
+            eg:<br />
+            <span id="colorRGB">rgb color 0, 255, 255</span><br />
+            css:<br />
+            #colorRGB{<br />
+            &emsp;color: rgb(0, 255, 255);<br />
+            }<br />
+            eg:<br />
+            <span id="colorRGBA">rgba color 0, 255, 255, 0.5 with transparency</span><br />
+            css:<br />
+            #colorRGBA{<br />
+            &emsp;color: rgba(0, 255, 255, 0.5);<br />
+            }
+        </p>
+        <h3>text align</h3>
+        <p>
+            eg:<br />
+            <p id="textAlign">center</p>
+            css:<br />
+            #textAlign{<br />
+            &emsp;text-align: center;<br />
+            }
+        </p>
+        <h3>text indent</h3>
+        <p>
+            The text-indent property in CSS is used to define the indentation of the first line in each block of text.<br />
+            em, a word = two space<br />
+            eg:<br />
+            <p id="textIndent">
+                I enter the void,
+                it has the shape of a viola:
+
+                Israel, Jenin, West Bank, Nablus—a rubble boy
+                shifts his scapula as if it was his continent, underground
+                Gazaground, I want to say—his only bone,
+
+                the rubble boy is a girl, I think,
+                her hair tossed,...
+            </p>
+            css:<br />
+            #textIndent{<br />
+            &emsp;text-indent: 2em;<br />
+            }
+        </p>
+        <h3>height and line height</h3>
+        <p>
+            eg:<br />
+            <p id="lineHeight">
+                O were my love yon Lilac fair,  
+                Wi' purple blossoms to the Spring,
+                And I, a bird to shelter there,  
+                When wearied on my little wing!
+                How I wad mourn when it was torn         
+                By Autumn wild, and Winter rude!
+                But I wad sing on wanton wing,  
+                When youthfu' May its bloom renew'd. 
+                O gin my love were yon red rose,  
+                That grows upon the castle wa';    
+                And I myself a drap o' dew,  
+                Into her bonie breast to fa'!
+                O there, beyond expression blest,  
+                I'd feast on beauty a' the night;
+                Seal'd on her silk-saft faulds to rest,
+                Till fley'd awa by Phoebus' light!
+            </p>
+            css:<br />
+            #lineHeight{<br />
+            &emsp;background-color: aqua;<br />
+            &emsp;height: 300px;<br />
+            &emsp;line-height: 50px;<br />
+            }
+        </p>
+        <h3>text decoration</h3>
+        <p>
+            eg:<br />
+            <span id="textDecoration">text decoration</span><br />
+            css:<br />
+            #textDecoration{<br />
+            &emsp;text-decoration: line-through;<br />
+            }
+        </p>
+        <h3>vertical align</h3>
+        <p>
+            eg:<br />
+            <p>
+                <img src="../../img/demo1.png">
+                <span>vertical align</span>
+            </p>
+            css:<br />
+            img, span{<br />
+            &emsp;vertical-align: middle;<br />
+            }
+        </p>
+        <h3>comprehensive example</h3>
+        <p>
+            eg:<br />
+            <a href="#">comprehensive example</a>
+            css:<br />
+            a[href="#"]{<br />
+            &emsp;text-decoration: none;<br />
+            }<br />
+            a:hover[href="#"]{<br />
+            &emsp;color: orange;<br />
+            &emsp;font-size: 50px;<br />
+            }<br />
+            a:active[href="#"]{<br />
+            &emsp;color: green;<br />
+            &emsp;font-size: 50px;<br />
+            }
+        </p>
+        <h3>text shadow</h3>
+        <p>
+            eg:<br />
+            <span id="shadowExp1">text shadow</span><br />
+            css:<br />
+        </p>
+        <h3>list</h3>
+        <p>
+            eg:<br />
+            <div id="listDiv1">
+                <h4 class="listTitle1">Product Lists</h4>
+                <ul id="listUl">
+                    <li>
+                        <a href="#">Book</a>&emsp;
+                        <a href="#">Movie</a>&emsp;
+                        <a href="#">Digital Products</a>
+                    </li>
+                    <li>
+                        <a href="#">Home Appliance</a>&emsp;
+                        <a href="#">Phone</a>&emsp;
+                        <a href="#">PC</a>
+                    </li>
+                    <li>
+                        <a href="#">Furniture</a>&emsp;
+                        <a href="#">Clothes</a>&emsp;
+                        <a href="#">Beauty Products</a>
+                    </li>
+                </ul>
+            </div>
+            code:<br />
+            &lt;div id=&quot;listDiv1&quot;&gt;<br />
+            &emsp;&lt;h4 class=&quot;listTitle1&quot;&gt;Product Lists&lt;/h4&gt;<br />
+            &emsp;&lt;ul id=&quot;listUl&quot;&gt;<br />
+            &emsp;&emsp;&lt;li&gt;<br />
+            &emsp;&emsp;&emsp;&lt;a href=&quot;#&quot;&gt;Book&lt;/a&gt;&amp;emsp;<br />
+            &emsp;&emsp;&emsp;&lt;a href=&quot;#&quot;&gt;Movie&lt;/a&gt;&amp;emsp;<br />
+            &emsp;&emsp;&emsp;&lt;a href=&quot;#&quot;&gt;Digital Products&lt;/a&gt;<br />
+            &emsp;&emsp;&lt;/li&gt;<br />
+            &emsp;&emsp;&lt;li&gt;<br />
+            &emsp;&emsp;&emsp;&lt;a href=&quot;#&quot;&gt;Home Appliance&lt;/a&gt;&amp;emsp;<br />
+            &emsp;&emsp;&emsp;&lt;a href=&quot;#&quot;&gt;Phone&lt;/a&gt;&amp;emsp;<br />
+            &emsp;&emsp;&emsp;&lt;a href=&quot;#&quot;&gt;PC&lt;/a&gt;<br />
+            &emsp;&emsp;&lt;/li&gt;<br />
+            &emsp;&emsp;&lt;li&gt;<br />
+            &emsp;&emsp;&emsp;&lt;a href=&quot;#&quot;&gt;Furniture&lt;/a&gt;&amp;emsp;<br />
+            &emsp;&emsp;&emsp;&lt;a href=&quot;#&quot;&gt;Clothes&lt;/a&gt;&amp;emsp;<br />
+            &emsp;&emsp;&emsp;&lt;a href=&quot;#&quot;&gt;Beauty Products&lt;/a&gt;<br />
+            &emsp;&emsp;&lt;/li&gt;<br />
+            &emsp;&lt;/ul&gt;<br />
+            &lt;/div&gt;<br />
+            css:<br />
+            #listDiv1{<br />
+            &emsp;width: 300px;<br />
+            }<br />
+            .listTitle1{<br />
+            &emsp;font-size: 18px;<br />
+            &emsp;font-weight: bold;<br />
+            &emsp;text-indent: 1em;<br />
+            &emsp;line-height: 35px;<br />
+            }<br />
+            ul{<br />
+            &emsp;background-color: grey;<br />
+            }<br />
+            ul[id=listUl] li{<br />
+            &emsp;height: 30px;<br />
+            &emsp;list-style: none;<br />
+            &emsp;text-indent: 1em;<br />
+            }<br />
+            li a{<br />
+            &emsp;text-decoration: none;<br />
+            &emsp;font-size: 14px;<br />
+            &emsp;color: #000;<br />
+            }
+        </p>
+        <h3>background</h3>
+        <p>
+            <div class="backgroundDiv1">
+                something inside
+            </div>
+            code:<br />
+            &lt;div class=&quot;backgroundDiv1&quot;&gt;<br />
+            &emsp;something inside<br />
+            &lt;/div&gt;<br />
+            css:<br />
+            .backgroundDiv1{<br />
+            &emsp;width: 900px;<br />
+            &emsp;height: 700px;<br />
+            &emsp;border: 1px solid red;<br />
+            &emsp;background-image: url("../img/pngtree-modern-double-color-futuristic-neon-background-picture-image_1181573.jpg");<br />
+            &emsp;font-size: 50px;<br />
+            &emsp;color: white;<br />
+            }<br />
+            ps: efficient background css generator<br />
+            <a href="https://www.grabient.com/">grabient</a>
+        </p>
+    </p>
+    <h2>CSS Box Model</h2>
+    <P>
+        In CSS, the term "box model" is used when talking about design and layout.
+        The CSS box model is essentially a box that wraps around every HTML element. 
+        It consists of: margins, borders, padding, and the actual content. 
+        <ol>
+            <li>Content - The content of the box, where text and images appear</li>
+            <li>Padding - Clears an area around the content. The padding is transparent</li>
+            <li>Border - A border that goes around the padding and content</li>
+            <li>Margin - Clears an area outside the border. The margin is transparent</li>
+        </ol>
+        eg.
+        <a href="../css/box_model/login_demo.html">login page example</a>
+    </P>
+    <h2>CSS float</h2>
+    <p>
+        <h3>display</h3>
+        <p>
+            The display property specifies the display behavior (the type of rendering box) of an element.
+            In HTML, the default display property value is taken from the HTML specifications or from the browser/user default style sheet. 
+            The default value in XML is inline, including SVG elements.
+        </p>
+        <h3>float</h3>
+        <p>
+            The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. 
+            The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to absolute positioning).
+        </p>
+        <h3>clear</h3>
+        <p>
+            The clear CSS property sets whether an element must be moved below (cleared) floating elements that precede it. 
+            The clear property applies to floating and non-floating elements.<br />
+            eg:<br />
+            <a href="../css/float/float.html">diplay, float and clear example</a>
+            <h4>How do you keep parents of floated elements from collapsing?</h4>
+            <p>
+                Although elements like div normally grow to fit their contents, using the float property can cause a startling problem for CSS newbies: 
+                    If floated elements have non-floated parent elements, the parent will collapse.<br />
+                solve:<br />
+                <ol>
+                    <li>
+                        Give the parent an explicit height.<br />
+                        <a href="../css/float/collapse_solve1.html">collapse solve exmaple 1</a>
+                    </li>
+                    <li>
+                        Append a "spacer" element inside the parent element.<br />
+                        <a href="../css/float/collapse_solve2.html">collapse solve exmaple 2</a>
+                    </li>
+                    <li>
+                        Set parent to overflow: auto.<br />
+                        <a href="../css/float/collapse_solve3.html">collapse solve exmaple 3</a>
+                    </li>
+                    <li>
+                        Recommand**: set pseudo classes to create a empty div inside the parent element.<br />
+                        <a href="../css/float/collapse_solve4.html">collapse solve exmaple 4</a>
+                    </li>
+                </ol>
+            </p>
+        </p>
+        <h3>overflow</h3>
+        <p>
+            The overflow CSS shorthand property sets the desired behavior for an element's overflow — 
+                i.e. when an element's content is too big to fit in its block formatting context — in both directions.<br />
+            eg:<br />
+            <a href="../css/float/overflow.html">overflow example</a>
+        </p>
+    </p>
+    <h2>CSS position</h2>
+    <p>
+        <h3>position</h3>
+        <p>
+            The position CSS property sets how an element is positioned in a document. 
+            The top, right, bottom, and left properties determine the final location of positioned elements, 
+                and have no effect on non-positioned elements.
+            <h4>relative</h4>
+            <p>
+                The element is positioned according to the normal flow of the document, 
+                    and then offset relative to itself based on the values of top, right, bottom, and left. 
+                The offset does not affect the position of any other elements; 
+                    thus, the space given for the element in the page layout is the same as if position were static.
+                This value creates a new stacking context when the value of z-index is not auto. 
+                Its effect on table-*-group, table-row, table-column, table-cell, and table-caption elements is undefined.<br />
+                eg:<br />
+                <a href="../css/position/relative_position.html">relate position example 1</a>
+                <a href="../css/position/relative_position_ex.html">relate position example 2</a>
+            </p>
+            <h4>absolute</h4>
+            <p>
+                The element is removed from the normal document flow, 
+                    and no space is created for the element in the page layout. 
+                It is positioned relative to its closest positioned ancestor, if any; 
+                    otherwise, it is placed relative to the initial containing block. 
+                Its final position is determined by the values of top, right, bottom, and left.
+                This value creates a new stacking context when the value of z-index is not auto. 
+                The margins of absolutely positioned boxes do not collapse with other margins.
+                eg:<br />
+                <a href="../css/position/absolute_position.html">absolute position example</a>
+            </p>
+            <h4>fixed</h4>
+            <p>
+                The element is removed from the normal document flow, 
+                    and no space is created for the element in the page layout. 
+                It is positioned relative to the initial containing block established by the viewport, 
+                    except when one of its ancestors has a transform, perspective, 
+                    or filter property set to something other than none (see the CSS Transforms Spec), 
+                    in which case that ancestor behaves as the containing block. 
+                (Note that there are browser inconsistencies with perspective and filter contributing to containing block formation.) 
+                Its final position is determined by the values of top, right, bottom, and left.
+                This value always creates a new stacking context. In printed documents, 
+                    the element is placed in the same position on every page.<br />
+                eg:<br />
+                <a href="../css/position/fixed_position.html">fixed position example</a>  
+            </p>
+        </p>
+        <h3>top, bottom</h3>
+        <p>
+            The top and bottom CSS properties participate in specifying the vertical position of a positioned element. 
+        </p>
+        <h3>left, right</h3>
+        <p>
+            The left and right CSS properties participate in specifying the horizontal position of a positioned element. 
+        </p>
+        <h3>z-index</h3>
+        <p>
+            The z-index CSS property sets the z-order of a positioned element and its descendants or flex items. 
+            Overlapping elements with a larger z-index cover those with a smaller one.<br />
+            eg:<br />
+            <a href="../css/position/z-index.html">z-index example</a>
+        </p>
+    </p>
+    <h2>CSS animation</h2>
+    <p>
+        CSS animations make it possible to animate transitions from one CSS style configuration to another. 
+        Animations consist of two components, a style describing the CSS animation and a set of keyframes 
+            that indicate the start and end states of the animation's style, as well as possible intermediate waypoints.
+    </p>
+    <p>
+        There are three key advantages to CSS animations over traditional script-driven animation techniques:
+        <ol>
+            <li>They're easy to use for simple animations; you can create them without even having to know JavaScript.</li>
+            <li>The animations run well, even under moderate system load. Simple animations can often perform poorly in JavaScript. The rendering engine can use frame-skipping and other techniques to keep the performance as smooth as possible.</li>
+            <li>Letting the browser control the animation sequence lets the browser optimize performance and efficiency by, for example, reducing the update frequency of animations running in tabs that aren't currently visible.</li>
+        </ol>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">more on CSS offical page</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">canvas api</a>
+    </p>
+</body>
+</html>

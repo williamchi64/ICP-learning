@@ -1,0 +1,43 @@
+div, span{
+    padding: 0;
+    margin: 0;
+}
+#display1{
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    display: inline-block;
+}
+#display2{
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    display: inline-block;
+}
+#father{
+    border: 1px #000 solid;
+}
+.layer01{
+    border: 1px #f00 dashed;
+    display: inline-block;
+    float: right;
+}
+.layer02{
+    border: 1px #00f dashed;
+    display: inline-block;
+    float: right;
+}
+.layer03{
+    border: 1px #060 dashed;
+    display: inline-block;
+    float: right;
+    clear: both;
+}
+.layer04{
+    border: 1px #666 dashed;
+    font-size: 12px;
+    line-height: 23px;
+    display: inline-block;
+    float: right;
+    clear: both;
+}
