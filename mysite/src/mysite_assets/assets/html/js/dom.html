@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.19.0/js/md5.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <p id="p3">outside father</p>
+    <div id="father">
+        <h1>I' m title</h1>
+        <p id="p1">p1</p>
+        <p class="p2">p2</p>
+    </div>
+
+    <div>
+        <form action="#" method="POST"  onclick="submit_sth()">
+            <p>
+                <label for="name">username:</label>
+                <input type="text" id="username" name="username" />
+            </p>
+            <p>
+                <label for="name">gender:</label>
+                <label for="option">male</label>
+                <input type="radio" name="gender" value="male" />
+                <label for="option">female</label>
+                <input type="radio" name="gender" value="female" />
+            </p>
+            <p>
+                <label for="name">password:</label>
+                <input type="password" id="input-password"/>
+                <input type="hidden" id="md5-password" name="password" />
+            </p>
+            <p>
+                <button type="submit">submit</button>
+            </p>
+        </form>
+    </div>
+    
+    <script src="../../js/dom.js"></script>
+</body>
+</html>
