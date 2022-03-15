@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <base href="/" />
+  <!-- Minified version -->
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <link rel="icon" href="favicon.ico" />
+  <link type="text/css" rel="stylesheet" href="main.css" />
+
+  <title>Microblog2</title>
+</head>
+
+<body>
+  <header>
+    <h1>Microblog2</h1>
+  </header>
+  <main>
+    <div>
+      <h2>AUTHOR</h2>
+      <div>
+        <label for="author">Author:</label>
+        <input type="text" id="authorText" /><br />
+        <span id="authorInfo"></span>
+      </div>
+      <div>
+        <button id="author">Set Author</button>
+      </div>
+    </div>
+    <div>
+      <h2>POST</h2>
+      <div>
+        <label for="message">What do you want to post:</label><br />
+        <textarea id="message"></textarea>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" /><br />
+        <span class="error"></span>
+      </div>
+      <div>
+        <button id="post">Post</button>
+      </div>
+    </div>
+    <div>
+      <h2>FILTER BY TIME</h2>
+      <div>
+        <label for="time">Since:</label>
+        <input type="datetime-local" id="time" />
+      </div>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Author</th>
+          <th>Message</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody id="posts"></tbody>
+    </table>
+  </main>
+  <main>
+    <div>
+      <div>
+        <label for="followText">Follow a canister you like:</label>
+        <input type="text" id="followText" /><br />
+        <span class="error"></span>
+      </div>
+      <div>
+        <button id="follow">Follow</button>
+      </div>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Following</th>
+        </tr>
+      </thead>
+      <tbody id="follows"></tbody>
+    </table>
+    <h2>TIMELINE</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Author</th>
+          <th>Message</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody id="timeline"></tbody>
+    </table>
+  </main>
+  <div>
+    <button id="clearall">clear all data</button>
+  </div>
+</body>
+
+</html>

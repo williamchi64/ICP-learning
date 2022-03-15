@@ -4,14 +4,14 @@ import Time "mo:base/Time";
 import Iter "mo:base/Iter";
 import Option "mo:base/Option";
 
-import Mb "microblog";
+import Mb "microblog2";
 
 import Debug "mo:base/Debug";
 // import Int "mo:base/Int";
 
-actor Microblog{
+actor Microblog2{
 
-    type Microblog = Mb.Microblog;
+    type Microblog2 = Mb.Microblog2;
     type Following = Mb.Following;
     type Messages = Mb.Messages;
     type Message = Mb.Message;
@@ -46,7 +46,7 @@ actor Microblog{
     public shared func timeline(since: Time.Time): async[Message] {
         var rslt_msgs: Messages = List.nil();
         for (id in Iter.fromList(following)) {
-            let canister: Microblog = actor(Principal.toText(id));
+            let canister: Microblog2 = actor(Principal.toText(id));
             let msgs = await canister.posts(since);
             for (msg in Iter.fromArray(msgs)) {
                 rslt_msgs := List.push(msg, rslt_msgs);

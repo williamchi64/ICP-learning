@@ -2,21 +2,19 @@ import Iter "mo:base/Iter";
 import List "mo:base/List";
 import Principal "mo:base/Principal";
 import Time "mo:base/Time";
-import Option "mo:base/Option";
 
 
-module Microblog {
+module Microblog2 {
 
     public type Message = {
         author: Text;
         content: Text;
         time: Time.Time;
     };
-
     public type Following = List.List<Principal>;
     public type Messages = List.List<Message>;
 
-    public type Microblog = actor {
+    public type Microblog2 = actor {
         follow: shared(Principal) -> async();
         follows: shared query() -> async[Principal];
         post: shared(Text, Text, Text) -> async();
