@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML Start</title>
+</head>
+<body>
+    <h1 id="titleh1">HTML Start</h1>
+    <h2>what is HTML</h2>
+    <p>
+        HTML, Hyper Text Markup Language, is the standard markup language (&lt;...&gt;&lt;/...&gt;) for documnets designed to be displayed in a web browser.
+        Newest version is HTML5. 
+        All popular browsers support HTML5.
+        Nowadays, HTML5 is maintained by World Wide Web Consortium (W3C).
+        All W3C maintained standards include HTML, XML, CSS, DOM, ECMAScript.
+    </p>
+    <h2>HTML Markup</h2>
+    <h3>1. &lt;!-- ... --&gt;</h3>
+    <p>
+        '!-- --' markup surrounds the documents only showed to a developer but not normal browser users.
+    </p>
+    <h3>2. &lt;!DOCTYPE [standard]&gt;</h3>
+    <p>
+        '!DOCTYPE' defines what standard is used in this web page. 
+        'html' represent HTML5 standard.
+        The default standard of a web browser is mostly HTML5, so this statement can be omitted.
+    </p>
+    <h3>3. &lt;html&gt;...&lt;/html&gt;</h3>
+    <p>
+        'html' markup surrounds the documents showed as a web page.
+        Anything out of 'html' will not affect the page or be displayed on it.
+    </p>
+    <h3>4. &lt;head&gt;...&lt;/head&gt;</h3>
+    <p>
+        'head' markup surrounds the header of a web page.
+        Page settings are defined in this block.
+        <h4>a. &lt;meta ...&gt;</h4>
+        <p>
+            'meta' descripts information needed on this web page.
+            This markup can be used for search engine optimization (SEO).
+            <h5>(1) charset</h5>
+            <p>
+                charset="UTF-8"
+            </p>
+            <h5>(2) name + content</h5>
+            <p>
+                name="key" content="content mapped by key"
+            </p>
+        </p>
+        <h4>b. &lt;title&gt;...&lt;/title&gt;</h4>
+        <p>
+            'title' markup surrounds the text in the web browser's title bar.
+            Only texts are allowed here.
+        </p>
+    </p>
+    <h3>5. &lt;body&gt;...&lt;/body&gt;</h3>
+    <p>
+        'body' markup surrounds the body of a web page.
+        Main documents are defined in this block.
+        <h4>a. &lt;h[number]&gt;...&lt;/h[number]&gt;</h4>
+        <p>
+            'h[number]' markup surrounds the title in the body of a web page.<br />
+            eg. 
+            <h1>&lt;h1&gt;level 1&lt;/h1&gt;</h1>
+            <h2>&lt;h2&gt;level 2&lt;/h2&gt;</h2>
+            <h3>&lt;h3&gt;level 3&lt;/h3&gt;</h3>
+            <h4>&lt;h4&gt;level 4&lt;/h4&gt;</h4>
+            <h5>&lt;h5&gt;level 5&lt;/h5&gt;</h5>
+            <h6>&lt;h6&gt;level 6&lt;/h6&gt;</h6>
+        </p>
+        <h4>b. &lt;p&gt;...&lt;/p&gt;</h4>
+        <p>
+            'p' markup surrounds the paragraph.<br />
+            eg.
+            <p>&lt;p&gt;First paragraph.&lt;/p&gt;</p>
+            <p>&lt;p&gt;Second paragraph.&lt;/p&gt;</p>
+        </p>
+        <h4>c. &lt;br /&gt;</h4>
+        <p>
+            'br' markup state that a newline comes after the markup.<br />
+            eg.<br />
+            First line.&lt;br /&gt;<br />
+            Second line.
+
+        </p>
+        <h4>d. &lt;hr /&gt;</h4>
+        <p>
+            'hr' markup display a line segmentate web Page.<br />
+            eg.&lt;hr /&gt;
+            <hr />
+        </p>
+        <h4>e. font style</h4>
+        <p>
+            <h5>(1) &lt;strong&gt;...&lt;/strong&gt; or &lt;b&gt;...&lt;/b&gt;</h5>
+            <p>
+                'strong' or 'b' markup surrounds the words displayed in bold front.<br />
+                eg.<br />
+                <strong>&lt;strong&gt;bold front&lt;/strong&gt;</strong><br />
+                <b>&lt;b&gt;bold front&lt;/b&gt;</b>
+            </p>
+            <h5>(2) &lt;em&gt;...&lt;/em&gt; or &lt;i&gt;...&lt;/i&gt;</h5>
+            <p>
+                'em' or 'i' markup surrounds the words displayed in emphasized front.<br />
+                eg.<br />
+                <em>&lt;em&gt;emphasized front&lt;/em&gt;</em><br />
+                <i>&lt;i&gt;emphasized front&lt;/i&gt;</i>
+            </p>
+        </p>
+        <h4>f. special symbols and reserved characters</h4>
+        <p>
+            <h5>(1) space: &amp;nbsp; or &amp;NonBreakingSpace;</h5>
+            <p>
+                eg.<br />
+                one space: &amp;nbsp; '&nbsp;'<br />
+                two spaces: &amp;nbsp;&amp;nbsp; '&nbsp;&nbsp;'
+            </p>
+            <h5>(2) less: &amp;lt; or greater: &amp;gt; </h5>
+            <p>
+                eg.<br />
+                less: &amp;lt; &lt;<br />
+                greater: &amp;gt; &gt;
+            </p>
+            <h5>(3) copyright: &amp;copy;</h5>
+            <p>
+                eg.<br />
+                copyright: &amp;copy; &copy;
+            </p>
+        </p>
+        <h4>g. &lt;img... /&gt;</h4>
+        <p>
+            'img' links to a image, and displays it in the web page.
+            <h5>(1) src</h5>
+            <p>
+                src="source, path to a image"
+            </p>
+            <h5>(2) alt</h5>
+            <p>
+                alt="alternative text, the text showed while the photo was broken"
+            </p>
+            <h5>(3) title</h5>
+            <p>
+                title="hover text"
+            </p>
+            <h5>(4) width</h5>
+            <p>
+                width="width of photo, a number"
+            </p>
+            <h5>(5) height</h5>
+            <p>
+                height="height of photo, a number"
+            </p>
+            eg.<br />
+            &lt;img src="../../img/cat0.jpg" alt="cat photo is missing" title="a cute cat photo" width="800" height="450" /&gt;<br />
+            <img src="../../img/cat0.jpg" alt="cat photo is missing" title="a cute cat photo" width="800" height="450" />
+        </p>
+        <h4>h. &lt;a... /&gt;</h4>
+        <p>
+            'a' an anchor links to another web page, an id or an email sender. 
+            It surrounds the text showed as hyperlink, anchorlink or functional link. 
+            <h5>(1) href</h5>
+            <p>
+                href="hypertext reference, path to another web page, an id or an email sender"
+            </p>
+            <h5>(2) target</h5>
+            <p>
+                target="target position of the linked web page"
+                eg.<br />
+                _self: open the linked page and replace this page<br />
+                _blank: open the linked page on a new tab<br />
+            </p>
+            eg.<br />
+            &lt;a href="http://google.com" target="_self"&gt;google search&lt;/a&gt;<br />
+            <a href="http://google.com" target="_self">
+                google search
+            </a><br />
+            &lt;a href="a/demo1.html" target="_blank"&gt;&lt;img src="../../img/demo1.png" /&gt;&lt;/a&gt;<br />
+            <a href="a/demo1.html" target="_blank">
+                <img src="../../img/demo1.png" />
+            </a><br />
+            &lt;a href="#titleh1"&gt;back to top&lt;/a&gt;<br />
+            '#titleh1' let web browser jump to a markup with id="titleh1"<br />
+            <a href="#titleh1">back to top</a><br />
+            &lt;a href="a/demo1.html#demo1titleh1"&gt;to demo1 top&lt;/a&gt;<br />
+            <a href="a/demo1.html#demo1titleh1">to demo1 top</a><br />
+            &lt;a href="mailto:williamchi3@yahoo.com"&gt;contact author by email&lt;/a&gt;<br />
+            'mailto:[email]' let web browser open an email sender<br />
+            <a href="mailto:williamchi3@yahoo.com">contact author by email</a>
+        </p>
+        <h4>i. Block and Inline elements</h4>
+        <p>
+            <h5>(1) Block element</h5>
+            <p>
+                Block element starts a newline after ending.<br />
+                &lt;p&gt;, &lt;h&gt;...
+            </p>
+            <h5>(2) Inline element</h5>
+            <p>
+                Inline element does not start a newline after ending.<br />
+                &lt;strong&gt;, &lt;em&gt;...
+            </p>
+        </p>
+        <h4>j. &lt;li&gt;...&lt;/li&gt;</h4>
+        <p>
+            'li' is a child element contained by following parent element.
+            It represents an item of a list.
+            <h5>(1) &lt;ul&gt;...&lt;/ul&gt;</h5>
+            <p>
+                unordered list<br />
+                eg.<br />
+                &lt;ul&gt;<br />
+                &emsp;&lt;li&gt;first item&lt;/li&gt;<br />
+                &emsp;&lt;li&gt;second item&lt;/li&gt;<br />
+                &lt;/ul&gt;<br />
+                <ul>
+                    <li>first item</li>
+                    <li>second item</li>
+                </ul>
+            </p>
+            <h5>(2) &lt;ol&gt;...&lt;/ol&gt;</h5>
+            <p>
+                ordered list<br />
+                &lt;ol&gt;<br />
+                &emsp;&lt;li&gt;first item&lt;/li&gt;<br />
+                &emsp;&lt;li&gt;second item&lt;/li&gt;<br />
+                &lt;/ol&gt;<br />
+                <ol>
+                    <li>first item</li>
+                    <li>second item</li>
+                </ol>
+            </p>
+            <h5>(3) &lt;dl&gt;...&lt;/dl&gt;</h5>
+            <p>
+                Definition list is different from normal list.
+                It contains &lt;dt&gt; as list name and &lt;dd&gt; as list item<br />
+                eg.<br />
+                &lt;dl&gt;<br />
+                &emsp;&lt;dt&gt;list name&lt;/dt&gt;<br />
+                &emsp;&lt;dd&gt;first item&lt;/dd&gt;<br />
+                &emsp;&lt;dd&gt;second item&lt;/dd&gt;<br />
+                &lt;/dl&gt;<br />
+                <dl>
+                    <dt>list name</dt>
+                    <dd>first item</dd>
+                    <dd>first item</dd>
+                </dl>
+            </p>
+        </p>
+        <h4>k. &lt;table&gt;...&lt;/table&gt;</h4>
+        <p>
+            'table' element represents a two dimentional table.
+            It contains row and column elements.
+            <h5>(1) &lt;tr&gt;...&lt;/tr&gt;</h5>
+            <p>
+                'tr' table row represents a row of data.
+                It contains table data of each column.
+            </p>
+            <h5>(2) &lt;td&gt;...&lt;/td&gt;</h5>
+            <p>
+                'td' table data represents unit data of a table.
+            </p>
+            <h5>(3) border (&lt;table&gt;)</h5>
+            <p>
+                'border' defines table border type.
+                It has been already deprecated.
+            </p>
+            <h5>(4) rowspan (&lt;td&gt;)</h5>
+            <p>
+                'rowspan' defines the number of row to span towards down on this table data element.
+            </p>
+            <h5>(5) colspan (&lt;td&gt;)</h5>
+            <p>
+                'colspan' defines the number of column to span towards right on this table data element.
+            </p>
+            eg.<br />
+            &lt;table border="lpx"&gt;<br />
+            &emsp;&lt;tr&gt;<br />
+            &emsp;&emsp;&lt;td rowspan="3"&gt;row span&lt;/td&gt;<br />
+            &emsp;&emsp;&lt;td&gt;1st row, 1st column&lt;/td&gt;<br />
+            &emsp;&emsp;&lt;td&gt;1st row, 2nd column&lt;/td&gt;<br />
+            &emsp;&lt;/tr&gt;<br />
+            &emsp;&lt;tr&gt;<br />
+            &emsp;&emsp;&lt;td&gt;2nd row, 1st column&lt;/td&gt;<br />
+            &emsp;&emsp;&lt;td&gt;2nd row, 2ndt column&lt;/td&gt;<br />
+            &emsp;&lt;/tr&gt;<br />
+            &emsp;&lt;tr&gt;<br />
+            &emsp;&emsp;&lt;td colspan="2"&gt;column span&lt;/td&gt;<br />
+            &emsp;&lt;/tr&gt;<br />
+            &lt;/table&gt;
+            <table border="lpx">
+                <tr>
+                    <td rowspan="3">row span</td>
+                    <td>1st row, 1st column</td>
+                    <td>1st row, 2nd column</td>
+                </tr>
+                <tr>
+                    <td>2nd row, 1st column</td>
+                    <td>2nd row, 2ndt column</td>
+                </tr>
+                <tr>
+                    <td colspan="2">column span</td>
+                </tr>
+            </table>
+        </p>
+        <h4>l. &lt;video&gt;&lt;/video&gt;</h4>
+        <p>
+            <h5>(1) controls</h5>
+            <p>
+                'controls' add web browser default controler of a video.
+            </p>
+            <h5>(2) autoplay</h5>
+            <p>
+                'autoplay' allow video autoplay after loading.
+                This feature is disabled in chrome web browser.
+            </p>
+            eg.<br />
+            &lt;video src="../../video/flower.mp4" controls autoplay width="500"&gt;&lt;/video&gt;<br />
+            <video src="../../video/flower.mp4" controls width="500"></video>
+        </p>
+        <h4>m. &lt;audio&gt;&lt;/audio&gt;</h4>
+        <p>
+            eg.<br />
+            &lt;audio src="../../audio/dog.wav" controls autoplay&gt;&lt;/audio&gt;<br />
+            <audio src="../../audio/dog.wav" controls></audio>
+        </p>
+        <h4>n. &lt;[content section]&gt;...&lt;/[content section]&gt;</h4>
+        <p>
+            <h5>(1) &lt;header&gt;...&lt;/header&gt;</h5>
+            <h5>(2) &lt;footer&gt;...&lt;/footer&gt;</h5>
+            <h5>(3) &lt;section&gt;...&lt;/section&gt;</h5>
+            <h5>(4) &lt;article&gt;...&lt;/article&gt;</h5>
+            <h5>(5) &lt;aside&gt;...&lt;/aside&gt;</h5>
+            <h5>(6) &lt;nav&gt;...&lt;/nav&gt;</h5>
+            <a href="content_section/content_section.html">content section detail</a>
+        </p>
+        <h4>o. &lt;iframe&gt;&lt;/iframe&gt;</h4>
+        <p>
+            'iframe' element represents a nested browsing context, embedding another HTML page into the current one.<br />
+            eg.<br />
+            <iframe src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+                id="player" type="text/html" width="640" height="390"frameborder="0">
+            </iframe><br />
+            <a href="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com" target="dynamic_iframe">
+                click on dynamic iframe
+            </a><br />
+            <iframe id="player" type="text/html" width="640" height="390"frameborder="0" name="dynamic_iframe"></iframe>
+        </p>
+        <h4>&lt;form&gt;...&lt;/form&gt;</h4>
+        <p>
+            'form' element represents a document section containing interactive controls for submitting information.
+            <h5>&lt;input... /&gt;</h5>
+            <p>
+                'input' element is used to create interactive controls for web-based forms in order to accept data from the user; 
+                a wide variety of types of input data and control widgets are available, depending on the device and user agent. 
+                The input element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
+            </p>
+            <h5>type</h5>
+            <p>
+                'type' attribute define how an 'input' works.
+                eg. text (default), password, checkbox, radio, submit, reset, file, hidden, image, button...
+            </p>
+            <h5>name</h5>
+            <p>
+                Name of the form control. Submitted with the form as part of a name/value pair.
+            </p>
+            <h5>value</h5>
+            <p>
+                The initial value of the control.
+            </p>
+            <h5>size</h5>
+            <p>
+                Size of the control
+            </p>
+            <h5>maxlength</h5>
+            <p>
+                Maximum length (number of characters) of value
+            </p>
+            <h5>checked</h5>
+            <p>
+                Whether the command or control is checked
+            </p>
+            <a href="form/form.html">form example</a>
+        </p>
+        <h4>&lt;...&gt;...&lt;/...&gt;</h4>
+        <p>
+            <h5>&lt;...&gt;...&lt;/...&gt;</h5>
+        </p>
+    </p>
+</body>
+</html>

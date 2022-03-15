@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script>
+        alert('hello world');
+    </script> -->
+    <script src="../../js/javascript.js"></script>
+
+    <title>JS Start</title>
+</head>
+<body>
+    <div>
+        <h1>What is JavaScript</h1>
+        <p>
+            JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. 
+            While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, 
+                Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, 
+                supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. 
+            This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. 
+            For information about API specifics to Web pages, please see Web APIs and DOM.
+            The standards for JavaScript are the ECMAScript Language Specification (ECMA-262) and the ECMAScript Internationalization API specification (ECMA-402). 
+            The JavaScript documentation throughout MDN is based on the latest draft versions of ECMA-262 and ECMA-402. 
+            And in cases where some proposals for new ECMAScript features have already been implemented in browsers, documentation and examples in MDN articles may use some of those new features.
+            Do not confuse JavaScript with the Java programming language. Both "Java" and "JavaScript" are trademarks or registered trademarks of Oracle in the U.S. and other countries. 
+            However, the two programming languages have very different syntax, semantics, and use.
+        </p>
+    </div>
+    <div>
+        <h1>embed javascript</h1>
+        <p>
+            two way to embed javascript code in html:
+            <div>
+                <h2>Inside &lt;script&gt;...&lt;/script&gt;</h2>
+                <p>
+                    <span>html:<br /></span>
+                    &lt;script&gt;<br />
+                    &emsp;alert('hello world');<br />
+                    &emsp;... js code here<br />
+                    &lt;/script&gt;
+                </p>
+            </div>
+            <div>
+                <h2>In js file</h2>
+                <p>
+                    <span>html:<br /></span>
+                    &lt;script src="../../js/javascript.js"&gt;&lt;/script&gt;<br />
+                    <span>js:<br /></span>
+                    alert('hello world');<br />
+                    ...js code here
+                </p>
+            </div>
+        </p>
+    </div>
+    <div>
+        <h1>Strict mode in JS</h1>
+        <p>
+            JavaScript's strict mode, introduced in ECMAScript 5, is a way to opt in to a restricted variant of JavaScript, 
+                thereby implicitly opting-out of "sloppy mode". 
+            Strict mode isn't just a subset: it intentionally has different semantics from normal code. 
+            Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, 
+                so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode. 
+            Strict mode code and non-strict mode code can coexist, so scripts can opt into strict mode incrementally.
+            <div>
+                Several situations with strict mode on JS: 
+                <h2>Strict mode for scripts</h2>
+                <p>
+                    // Whole-script strict mode syntax, should claim on the beginning of the script.<br />
+                    'use strict';<br />
+                    var v = "Hi! I'm a strict mode script!";
+                </p>
+            </div>
+            <div>
+                <h2>Strict mode for functions</h2>
+                <p>
+                    function strict() {<br />
+                    &emsp;// Function-level strict mode syntax<br />
+                    &emsp;'use strict';<br />
+                    &emsp;function nested() { return 'And so am I!'; }<br />
+                    &emsp;return "Hi!  I'm a strict mode function!  " + nested();<br />
+                    }<br />
+                    function notStrict() { return "I'm not strict."; }
+                </p>
+            </div>
+            <div>
+                <h2>Strict mode for modules</h2>
+                <p>
+                    function strict() {<br />
+                    &emsp;// because this is a module, I'm strict by default<br />
+                    }<br />
+                    export default strict;
+                </p>
+            </div>
+            <div>
+                <h2>Strict mode for classes</h2>
+                <p>
+                    All parts of ECMAScript classes are strict mode code, 
+                        including both class declarations and class expressions — and so also including all parts of class bodies.
+                </p>
+            </div>
+        </p>
+    </div>
+</body>
+</html>

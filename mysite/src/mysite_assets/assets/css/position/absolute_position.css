@@ -1,0 +1,27 @@
+div{
+    margin: 10px;
+    padding: 5px;
+    font-size: 12px;
+    line-height: 25px;
+}
+#father{
+    border: 1px solid #666;
+    padding: 0px;
+    /*positioned ancestor*/
+    position: relative;
+}
+#first{
+    border: 1px solid #b27530;
+    background-color: #a13d30;
+}
+#second{
+    border: 1px solid #255066;
+    background-color: #255099;
+    position: absolute;
+    right: 30px;
+    top: -10px;
+}
+#third{
+    border: 1px solid #1c6615;
+    background-color: #1c6699;
+}
