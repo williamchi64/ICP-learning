@@ -52,10 +52,21 @@
 
 - [x] deploy microblog
 
-  Code: [microblog](./microblog/src/microblog/main.mo)
+  Code: [microblog](./blob/v0.4/microblog/src/microblog/main.mo)
 
   microblog canister: 2frjo-baaaa-aaaal-qanfq-cai
 
   microblog2 canister: 2qwyd-aiaaa-aaaal-qanga-cai
 
   Test canister api on: https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.ic0.app
+
+### homework 5
+
+- [x] deploy microblog interacting with other canisters on ICP env
+
+  Code: [microblog](./microblog/src/microblog/main.mo)
+
+  microblog canister: g5zwk-qaaaa-aaaal-qaqca-cai
+
+  canister frontend: https://g2yq6-5yaaa-aaaal-qaqcq-cai.ic0.app/
+
