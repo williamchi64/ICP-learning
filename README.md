@@ -9,6 +9,7 @@
   - [Homework 2](#homework-2)
   - [Homework 3](#homework-3)
   - [Homework 4](#homework-4)
+  - [Homework 5](#homework-5)
 
 ---
 
@@ -52,7 +53,7 @@
 
 - [x] deploy microblog
 
-  Code: [microblog](./blob/v0.4/microblog/src/microblog/main.mo)
+  Code: [microblog](https://github.com/williamchi64/ICP-learning/blob/v0.4/microblog/src/microblog/main.mo)
 
   microblog canister: 2frjo-baaaa-aaaal-qanfq-cai
 
