@@ -101,7 +101,7 @@ async function load_posts() {
   for (const post of posts) {
     let timestamp = motokoTimeToJsTimestamp(post.time);
     let date = timestampToDate(timestamp);
-    let tr_elem = toTableRow(post.author, post.content, date);
+    let tr_elem = toTableRow(post.author, post.text, date);
     posts_table.appendChild(tr_elem);
   };
 };
@@ -141,7 +141,7 @@ async function load_timeline() {
     if (flag && follow.author !== index.filter_follow) continue;
     let timestamp = motokoTimeToJsTimestamp(follow.time);
     let date = timestampToDate(timestamp);
-    let tr_elem = toTableRow(follow.author, follow.content, date);
+    let tr_elem = toTableRow(follow.author, follow.text, date);
     timeline_table.appendChild(tr_elem);
   };
   index.filter_old = index.filter_follow;

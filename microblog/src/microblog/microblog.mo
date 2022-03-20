@@ -9,7 +9,7 @@ module Microblog {
 
     public type Message = {
         author: Text;
-        content: Text;
+        text: Text;
         time: Time.Time;
     };
 

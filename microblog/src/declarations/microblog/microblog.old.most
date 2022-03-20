@@ -1,5 +1,5 @@
 type List<T> = ?(T, List<T>);
-type Message = {author : Text; text : Text; time : Time};
+type Message = {author : Text; content : Text; time : Time};
 actor {
   stable var author_name : Text;
   stable var following : ?(Principal, List<Principal>);

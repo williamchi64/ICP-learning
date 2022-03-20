@@ -33,7 +33,7 @@ actor Microblog{
         assert(password == "123456");
         let new_message: Message = {
             author = author_name;
-            content = text;
+            text = text;
             time = Time.now();
         };
         messages := List.push(new_message, messages);
@@ -70,7 +70,7 @@ actor Microblog{
         for (msg in Iter.fromList(messages)) {
             let new_message: Message = {
                 author = name;
-                content = msg.content;
+                text = msg.text;
                 time = msg.time;
             };
             rslt_msgs := List.push(new_message, rslt_msgs);
